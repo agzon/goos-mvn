@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>auction demo 1</name>
   <description>action demo with maven</description>
-  
+    
   <dependencies>
   	<dependency>
   		<groupId>junit</groupId>
@@ -13,6 +13,28 @@
   		<version>4.12</version>
   		<scope>test</scope>
   	</dependency>
+	<dependency>
+		<groupId>com.googlecode.windowlicker</groupId>
+		<artifactId>windowlicker-core</artifactId>
+		<version>r268</version>
+	</dependency>
+  	<dependency>
+		<groupId>com.googlecode.windowlicker</groupId>
+		<artifactId>windowlicker-swing</artifactId>
+		<version>r268</version>
+	</dependency>
+	<dependency>
+		<groupId>org.igniterealtime.smack</groupId>
+		<artifactId>smack-core</artifactId>
+		<version>3.1.0</version>
+		<scope>system</scope>
+		<systemPath>${project.basedir}/libs-old/smack_3_1_0.jar</systemPath>
+	</dependency>
+	<dependency>
+		<groupId>org.igniterealtime.smack</groupId>
+		<artifactId>smackx</artifactId>
+		<version>3.1.0</version>
+	</dependency>		
   </dependencies>
   
   <profiles>
@@ -38,17 +60,18 @@
   </profiles>
   
   <build>	  
+  	<!-- 
 	  <filters>
 	  	<filter>profiles/${build.profile.id}/config.properties</filter>
 	  </filters>	  	  
-	  
+	-->  
 	  <resources>
 	  	<resource>
 	  		<filtering>true</filtering>
 	  		<directory>src/main/resources</directory>
 	  	</resource>	  	
 	  </resources>
-	  
+	  <!-- 
 	  <plugins>	  
 	  	<plugin>
 	  		<groupId>org.codehaus.mojo</groupId>
@@ -114,7 +137,8 @@
 	  			</execution>
 	  		</executions>
 	  	</plugin>
-	  </plugins>	  
+	  </plugins>
+	   -->	  
   </build>
   
   

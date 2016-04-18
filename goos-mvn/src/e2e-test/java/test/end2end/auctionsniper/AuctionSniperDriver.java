@@ -1,9 +1,14 @@
-package test.endtoend.auctionsniper;
+package test.end2end.auctionsniper;
 
 import com.objogate.wl.swing.AWTEventQueueProber;
 import com.objogate.wl.swing.driver.JFrameDriver;
 import com.objogate.wl.swing.driver.JLabelDriver;
 import com.objogate.wl.swing.gesture.GesturePerformer;
+
+import auctionsniper.Main;
+import auctionsniper.ui.MainWindow;
+
+import static org.hamcrest.Matchers.equalTo;
 
 public class AuctionSniperDriver extends JFrameDriver {
 

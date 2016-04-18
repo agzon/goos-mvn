@@ -1,4 +1,8 @@
-package test.endtoend.auctionsniper;
+package test.end2end.auctionsniper;
+
+import static test.end2end.auctionsniper.FakeAuctionServer.XMPP_HOSTNAME;
+
+import auctionsniper.Main;
 
 public class ApplicationRunner {
 	
@@ -6,7 +10,7 @@ public class ApplicationRunner {
 	public static final String SNIPER_PASSWORD = "sniper";
 	private AuctionSniperDriver driver;
 	
-	public void startBiddingIn(final fakeAuctionServer auction) {
+	public void startBiddingIn(final FakeAuctionServer auction) {
 		
 		Thread thread = new Thread("Test application") {
 			@Override

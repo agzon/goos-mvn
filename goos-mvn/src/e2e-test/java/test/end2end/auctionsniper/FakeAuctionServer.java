@@ -1,4 +1,4 @@
-package test.endtoend.auctionsniper;
+package test.end2end.auctionsniper;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -9,6 +9,10 @@ import org.jivesoftware.smack.MessageListener;
 import org.jivesoftware.smack.XMPPConnection;
 import org.jivesoftware.smack.XMPPException;
 import org.jivesoftware.smack.packet.Message;
+
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
+import static org.junit.Assert.assertThat;
 
 public class FakeAuctionServer {
 	
@@ -46,7 +50,7 @@ public class FakeAuctionServer {
 		return itemId;
 	}
 	
-	public void hasReceivedJoinRequest() throws InterruptedException {
+	public void hasReceivedJoinRequestFromSniper() throws InterruptedException {
 		messageListener.receivesAMessage();		
 	}
 	
@@ -58,7 +62,7 @@ public class FakeAuctionServer {
 		connection.disconnect();
 	}
 	
-	public class SingleMessageListener impArrayBlockingQueue<E>tener {
+	public class SingleMessageListener implements MessageListener {
 		
 		private final ArrayBlockingQueue<Message> messages = new ArrayBlockingQueue<>(1);
 		

@@ -50,9 +50,9 @@
   		</properties>
   	</profile>
   	<profile>
-  		<id>integration-test</id>
+  		<id>it</id>
   		<properties>
-  			<build.profile.id>integration-test</build.profile.id>
+  			<build.profile.id>it</build.profile.id>
   			<skip.integration.tests>false</skip.integration.tests>
   			<skip.unit.tests>true</skip.unit.tests>  			
   		</properties>
@@ -71,8 +71,9 @@
 	  		<directory>src/main/resources</directory>
 	  	</resource>	  	
 	  </resources>
-	  <!-- 
-	  <plugins>	  
+	   
+	  <plugins>	 
+	  
 	  	<plugin>
 	  		<groupId>org.codehaus.mojo</groupId>
 	  		<artifactId>build-helper-maven-plugin</artifactId>
@@ -119,7 +120,7 @@
 	  			</excludes>
 	  		</configuration>
 	  	</plugin>
-	  	
+	  	 
 	  	<plugin>
 	  		<groupId>org.apache.maven.plugins</groupId>
 	  		<artifactId>maven-failsafe-plugin</artifactId>
@@ -138,7 +139,7 @@
 	  		</executions>
 	  	</plugin>
 	  </plugins>
-	   -->	  
+	  	  
   </build>
   
   

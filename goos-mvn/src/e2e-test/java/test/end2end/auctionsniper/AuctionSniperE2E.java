@@ -1,4 +1,4 @@
-package test.endtoend.auctionsniper;
+package test.end2end.auctionsniper;
 
 import org.junit.After;
 import org.junit.Test;
@@ -9,7 +9,7 @@ public class AuctionSniperE2E {
 	private final ApplicationRunner application = new ApplicationRunner();
 	
 	@Test
-	public void sniperJoinsAuctionUntilAuctionCloses() {
+	public void sniperJoinsAuctionUntilAuctionCloses() throws Exception {
 		
 		auction.startSellingItem();
 		application.startBiddingIn(auction);
